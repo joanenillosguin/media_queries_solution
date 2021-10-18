@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <style>
+      /* 1.
+        apply global configs
+      */
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+  
+    /* 2. 
+        - apply Segoe UI font for global style 
+    */
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+   
+    /* 3.
+        - apply any background images from https://www.pexels.com/ (Note:* choose a landscape type of images)
+        - all text to white
+        - height of the parent container should be 100% in view port height
+        - apply 32 pixels of padding in all sides except top using rem unit
+        - apply a space on top using padding with a value of 15rem using pixels unit.
+        - all text should place to center
+
+    */
+    .container{
+      background: url(/image/background.jpeg) no-repeat center center/cover;
+      color: #fff;
+      height:100vh;
+      padding: 0 2rem 2rem 2rem;
+      padding-top:240px;
+      text-align: center;
+    }
+
+ 
+    /* 4.
+        - apply a font size of 3rem in all heading tags
+    */
+    /* 5. 
+        - apply a margin of 1rem for top and bottom and 0 to left and right
+    */
+   h1, h3{
+     font-size: 3rem;
+     margin: 1rem 0;
+   }
+   
+    /* 6. achor tag
+        - button should be displayed inline block
+        - remove underline
+        - apply a white background
+        - apply any color you want on the text
+        - apply a space inside of 0.75rem for top and bottom and 2rem for left and right;
+    
+    */
+    .btn{
+      display: inline-block;
+      text-decoration: none;
+      background-color: white;
+      color: blue;
+      padding:0.75rem 2rem;
+      margin-top: 1.5rem;
+      font-weight: bold;
+    }
+    
+
+ 
+    /* 7. section
+    
+        - apply a space in all sides of 2 rem
+    */
+    section{
+      margin: 2rem;
+    }
+
+    /* 8. media queries
+        - inspect the browser and use the mobile inspect tool 
+        - pixel 2 XL, iphone 5 SE, iphone X, ipad,ipad pro
+        - all identified devices above should be configured and use
+        necessary changes on their default css rule for mobile responsiveness
+        - use inline styling for this one
+
+    */
+   
+    /* ipone 5 SE */
+    @media (max-width: 320px){
+      .container{
+      background: url(https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center/cover;
+      padding-top:3rem;
+      }
+
+      h1, h3{
+        font-size: 1rem;
+      }
+      p{
+        font-size: 0.75rem;
+      } 
+      .btn{
+        color: red;
+        font-size: 10px ;
+        padding: 8px 10px;  
+      }
+
+    }
+    /* /* iphone x 375 * / */
+    @media (min-width: 321px) and (max-width: 375px){
+      .container{
+        background: url(https://images.pexels.com/photos/3308588/pexels-photo-3308588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center/cover;
+        padding-top: 7rem ;
+      }
+      h1,h3{
+        font-size: 1rem;
+      }
+      p{
+        font-size: 0.76rem;
+      }
+      .btn{
+        color: green;
+        font-size: 11px;
+        padding: 7px 8px;
+      }
+    }
+     /* pixel 2 XL 411 */
+     @media (min-width: 376px) and (max-width: 411px){
+      .container{
+        background:url(https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) no-repeat center center/cover;
+        padding-top:7.5rem;
+      }
+      h1, h3{
+        font-size: 1.5rem;
+      }
+      p{
+        font-size: 0.83rem;
+      }
+      .btn{
+        color: tomato;
+        font-size: 12px;
+        padding: 9px 10px;
+      }
+    }
+    
+    /* ipad  768*/
+    @media (min-width: 412px) and (max-width: 768px){
+      .container{
+        background: url(https://images.pexels.com/photos/1293120/pexels-photo-1293120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)no-repeat center center/cover;
+        padding-top: 7.8rem;
+      }
+      h1, h3{
+        font-size: 1.7rem;
+      }
+      p{
+        font-size: 0.86rem;
+      }
+      .btn{
+        color: teal;
+        font-size: 13px;
+        padding: 9px 15px;
+      }
+
+    }
+    /* ipad pro  1024 */
+    @media (min-width: 769px) and (max-width: 1024px){
+      .container{
+        background: url(https://images.pexels.com/photos/1145720/pexels-photo-1145720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)no-repeat center center/cover;
+        padding-top: 9rem;
+      }
+      h1, h3{
+        font-size: 1.9rem;
+      }
+      p{
+        font-size: 0.89rem;
+      }
+      .btn{
+        color: black;
+        font-size: 12px;
+        padding: 10px 16px;
+      }
+    }
+    @media (min-width: 1025px){
+      .container{
+        padding-top: 11rem;
+      }
+      h1, h3{
+        font-size: 2rem;
+      }
+      p{
+        font-size: 1rem;
+      }
+      .btn{
+        color: black;
+        font-size: 15px;
+        padding: 11px 17px;
+      }
+    }   
+  </style>
+</head>
+<body>
+  <div class="container">
+  <header>
+    <h1>Welcome To Our Website</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto necessitatibus sunt recusandae a facere totam?</p>
+    <a href= "#" class="btn">Find Out More</a>
+  </header>
+
+  <section>
+    <h3>About Our Company</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos repellendus nulla eaque maxime in eveniet aut, cumque reiciendis fugit voluptas saepe distinctio voluptatem excepturi quam rerum tempore debitis possimus? Aliquid adipisci dolorum doloribus voluptate doloremque sed libero dignissimos itaque cumque qui totam, nemo molestiae amet architecto dolore nihil ipsa facilis?</p>
+  </section>
+</div>
+</body>
+</html>
